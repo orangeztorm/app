@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from typing import Dict
+from typing import Dict, Optional
 
 
 class TokenGenerator(ABC):
@@ -15,7 +15,7 @@ class TokenGenerator(ABC):
         pass
 
     @abstractmethod
-    def verify_token(self, token: str) -> Dict:
+    def verify_token(self, token: str) -> Optional[Dict]:
         """
         Verify the given JWT token and return its payload.
         """
