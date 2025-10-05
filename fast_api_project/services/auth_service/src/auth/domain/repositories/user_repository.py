@@ -4,7 +4,7 @@ from typing import Optional
 from ..entities import User
 
 
-class UserRepository(ABC):
+class IUserRepository(ABC):
     """
     Abstract base class for User repository.
     """
