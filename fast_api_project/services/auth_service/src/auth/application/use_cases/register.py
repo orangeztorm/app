@@ -1,5 +1,4 @@
-from domain import User
-
+from auth.domain.entities import User
 from auth.domain.exceptions.exceptions import UserAlreadyExistsError
 
 from ...domain.repositories import IUserRepository
@@ -23,7 +22,9 @@ class RegisterUser:
         existing_user = await self.user_repo.get_by_email(email_vo.value)
 
         if existing_user:
-            raise UserAlreadyExistsError(f"User with email {email_vo.value} already exists.")
+            raise UserAlreadyExistsError(
+                f"User with email {email_vo.value} already exists."
+            )
 
         # hash password
         hashed = self.hasher.hash(password_vo.value)

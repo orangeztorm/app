@@ -1,9 +1,11 @@
 from contextlib import asynccontextmanager
-from lib2to3.pytree import Base  # async database connection handling
 
 from fastapi import FastAPI
 
 from .config import engine  # async database engine
+from .infrastructure.database.user_model import (
+    Base,
+)  # async database connection handling
 from .interface.api.auth_routes import router as auth_router  # auth routes
 
 
@@ -30,7 +32,7 @@ async def lifespan(app: FastAPI):
 app = FastAPI(title="Auth Service", lifespan=lifespan)
 
 # Include routers
-app.include(auth_router)
+app.include_router(auth_router)
 
 
 @app.get("/health")
