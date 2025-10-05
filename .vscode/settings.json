@@ -1,0 +1,5 @@
+{
+    "python.analysis.extraPaths": [
+        "./fast_api_project/services/auth_service/src"
+    ]
+}

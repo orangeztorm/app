@@ -1,6 +1,9 @@
-from dataclasses import dataclass, field # generates useful methods like __init__, __repr__, etc.
-from datetime import datetime, timezone # python's built-in datetime module
-from typing import Optional # for optional type hinting
+from dataclasses import (  # generates useful methods like __init__, __repr__, etc.
+    dataclass,
+    field,
+)
+from datetime import datetime, timezone  # python's built-in datetime module
+from typing import Optional  # for optional type hinting
 
 
 @dataclass
