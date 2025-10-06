@@ -1,7 +1,7 @@
 from datetime import datetime, timedelta, timezone
 from typing import Dict, Optional
 
-import jwt
+from jose import jwt
 
 from ...application.ports.token_generator import TokenGenerator
 

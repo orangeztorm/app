@@ -1,5 +1,5 @@
 from auth.domain.entities import User
-from auth.domain.exceptions.exceptions import UserAlreadyExistsError
+from auth.domain.exceptions import UserAlreadyExistsError
 
 from ...domain.repositories import IUserRepository
 from ...domain.value_objects import Email, Password
